@@ -52,14 +52,16 @@ p{
     font-size: clamp(1.4rem, 6vw,1.6rem);
     margin-bottom: 1.3rem;
     text-wrap: balance;
+    color: $clr-dark;
 }
 h1,h2,h3,h4,h5,h6{
     font-weight:bold ;
     font-family: "Sprat-CondensedBold",arial, sans-serif;
     text-wrap: balance;
+    color: $clr-dark;
 }
 h1{
-    font-size: clamp(2.5rem, 6vw,4rem);
+    font-size: clamp(3.5rem, 6vw,5.5rem);
     margin-bottom: 2rem;
 }
 h2{
@@ -77,6 +79,28 @@ h4{
 
 ul{
     list-style: none;
+    li{
+        color: $clr-dark;
+        font-family: "Sprat-CondensedMedium";
+    i{
+        font-family: "Sprat-CondensedMedium";
+    }
 }
+}
+img{
+    filter: brightness(50%);
+    &:hover{
+        filter: brightness(100%);
+        transform: scale(1.025); 
+    }
+}
+button{
+    color: $clr-dark;
+}
+label, input ,textarea{
+    color:$clr-dark;
+    font-family:"Roboto" ;
+}
+
 
     

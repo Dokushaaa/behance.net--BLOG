@@ -10,7 +10,7 @@
     font-family: Speedee-Bold;
     @include d-flex(center, center);
         &:hover{
-            background: darken($clr-light,20);
+            background: darken(#fff , 20);
         }
     &-primary{
         background: $clr-light;

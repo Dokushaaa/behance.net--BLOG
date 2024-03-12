@@ -6,16 +6,29 @@
     <link rel="stylesheet" href="./dist/css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
   <header class="header">
     <div class="container">
         <div class="header__wrapper">
             <a href="#">Studio</a>
+            <ul class="autolinks flex gap-2" id="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./single.html">Blog</a></li>
+                <li><a href="">Podcasts</a></li>
+                <li><a href="./book.html">Books</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            
+            
+            <div class="memuuuuuuuuu">
+                <a href="./contacts.html"class="fa-solid fa-building"></a>
+                <button class="theme"><i class="far  fa-sun"></i></button>
             <button>
-                <i class="barbar fas fa-bars"></i>
+                <i id="toggle__menu" class="barbar fas fa-bars"></i>
             </button>
+        </div>
         </div>
     </div>
   </header>
@@ -291,5 +304,37 @@
           },
       });
   </script>
+  <script>
+    const toggle__Menu = document.querySelector("#toggle__menu");
+    const menu = document.querySelector("#menu");
+   
+
+    toggle__Menu.addEventListener("click", (e)=>{
+        <!-- prevents refresh -->
+        e.preventDefault();
+        menu.classList.toggle("open");
+        
+    });
+    const btnTheme = document.querySelector(".theme");
+    const root = document.querySelector(":root");
+    const body = document.querySelector("body");
+    const icon = document.querySelector(".far");
+
+    btnTheme.addEventListener("click", () => {
+        if (body.classList.contains("dark")) {
+         icon.classList.remove("fa-moon");
+          body.classList.remove("dark");
+          root.style.setProperty("--light", "#fff");
+          root.style.setProperty("--dark", "#000");
+          icon.classList.add("fa-sun");
+        } else {
+          body.classList.add("dark");
+          icon.classList.remove("fa-sun");
+          root.style.setProperty("--light", "#000");
+          root.style.setProperty("--dark", "#fff");
+          icon.classList.add("fa-moon");
+        }
+      });
+</script>
 </body>
 </html>
